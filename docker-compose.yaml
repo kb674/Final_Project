@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    frontend:
+        container_name: frontend
+        image: spring-petclinic-angular
+        build: ./spring-petclinic-angular
+        ports:
+            - published: 8080
+              target: 8080
+    backend:
+        container_name: backend
+        image: springcommunity/spring-petclinic-rest
