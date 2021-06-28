@@ -7,7 +7,7 @@ spec:
     app: spring-petclinic-rest
   ports: 
   - protocol: TCP
-    port: 5000
+    port: 9966
     targetPort: 9966
   type: ClusterIP
 ---
