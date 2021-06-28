@@ -22,9 +22,6 @@ nvm use 14.15
 # install node package manager
 sudo apt install npm -y
 
-# install yarn
-sudo npm install -g yarn
-
 # install angular
 echo n | sudo npm install -g @angular/cli@latest
 ng update @angular/cli @angular/core --allow-dirty --force

@@ -1,9 +1,0 @@
-FROM maven:latest as maven
-COPY ./pom.xml ./pom.xml
-COPY ./src ./src
-RUN mvn dependency:go-offline -B
-RUN mvn cpackage
-FROM openjdk:8-alpine
-WORKDIR /build
-COPY --from=maven /build/target/petclinic-backend-0.0.1.jar app.jar
-ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]

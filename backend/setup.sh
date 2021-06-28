@@ -3,8 +3,11 @@
 # install maven
 sudo apt-get install maven -y
 
-# run mysql in a docker container
-docker run --name mysql-petclinic -e MYSQL_ROOT_PASSWORD=petclinic -e MYSQL_DATABASE=petclinic -d -p 3306:3306 mysql:5.7.8
-
 # install mysql
 sudo apt install mysql-client-core-5.7
+
+# run backend in a docker container
+docker run --rm -d -p 9966:9966 --name backend_container springcommunity/spring-petclinic-rest
+
+# run mysql in a docker container
+docker run -e MYSQL_ROOT_PASSWORD=petclinic -e MYSQL_DATABASE=petclinic -d -p 3306:3306 --name mysql-petclinic mysql:5.7.8
