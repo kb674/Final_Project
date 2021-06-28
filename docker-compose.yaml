@@ -5,15 +5,15 @@ services:
         image: jaydenlsf/spring-petclinic-angular
         build: ./frontend
         ports:
-        - published: 5000
-          target: 5000
+        - target: 8080
+          published: 8080
           protocol: tcp
     backend:
         container_name: backend
         image: springcommunity/spring-petclinic-rest
         ports:
-        - published: 9966
-          target: 9966
+        - target: 9966
+          published: 9966
           protocol: tcp
     nginx:
         container_name: nginx
