@@ -4,9 +4,9 @@ pipeline {
         docker_credentials = credentials('docker_credentials')
     }
     stages{
-        stage('Build'){
+        stage('Setup'){
             steps{
-                sh "bash jenkins/scripts/build.sh"
+                sh "bash jenkins/scripts/setup.sh"
             }
         }
         stage('Test'){
