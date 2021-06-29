@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-rest
+  name: backend
 spec:
   selector:
-    app: spring-petclinic-rest
+    app: backend
   ports: 
   - protocol: TCP
     port: 9966
@@ -14,14 +14,14 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic-rest
+  name: backend
   labels: 
-    app: spring-petclinic-rest
+    app: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic-rest
+      app: backend
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -30,10 +30,10 @@ spec:
   template:
     metadata:
       labels:
-        app: spring-petclinic-rest
+        app: backend
     spec:
       containers:
-      - name: spring-petclinic-rest
+      - name: backend
         image: springcommunity/spring-petclinic-rest
         ports:
         - containerPort: 9966 
