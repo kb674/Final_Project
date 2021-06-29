@@ -4,9 +4,14 @@
 sudo apt update -y
 sudo apt install unzip wget -y
 
-
 #install Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+#Authenticate Jenkins with the managed identity
+az login --identity
+
+#Credentials
+az aks get-credentials --resource-group| --name <Cluster Name>
 
 #Install Terraform
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
