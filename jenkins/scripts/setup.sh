@@ -11,7 +11,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login --identity
 
 #Credentials
-az aks get-credentials --resource-group| --name <Cluster Name>
+az aks get-credentials --resource-group| --name k8s-test-cluster
 
 #Install Terraform
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
