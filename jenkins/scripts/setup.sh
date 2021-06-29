@@ -15,9 +15,9 @@ az aks get-credentials --resource-group| --name k8s-test-cluster
 
 #Install Terraform
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
-unzip terraform_*_linux_*.zip
+unzip terraform1._1.0.1_linux_*.zip
 sudo mv terraform /usr/local/bin/
-rm terraform_*_linux_*.zip
+rm terraform_1.0.1_linux_*.zip
 
 # Install kubectl
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
