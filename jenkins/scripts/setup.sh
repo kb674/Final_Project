@@ -2,6 +2,7 @@
 
 #Install dependencies
 sudo apt update -y
+sudo apt upgrade -y
 sudo apt install unzip wget -y
 
 #install Azure CLI
@@ -14,10 +15,9 @@ az login --identity
 az aks get-credentials --resource-group| --name k8s-test-cluster
 
 #Install Terraform
-wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
-unzip terraform1._1.0.1_linux_*.zip
-sudo mv terraform /usr/local/bin/
-rm terraform_1.0.1_linux_*.zip
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt install terraform
 
 # Install kubectl
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
