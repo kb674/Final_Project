@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-petclinic-rest
+spec:
+  selector:
+    app: spring-petclinic-rest
+  ports: 
+  - protocol: TCP
+    port: 9966
+    targetPort: 9966
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic-rest
+  labels: 
+    app: spring-petclinic-rest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-petclinic-rest
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: spring-petclinic-rest
+    spec:
+      containers:
+      - name: spring-petclinic-rest
+        image: springcommunity/spring-petclinic-rest
+        ports:
+        - containerPort: 9966 
