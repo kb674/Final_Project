@@ -26,3 +26,4 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 sudo az aks install-cli
 
 
+
