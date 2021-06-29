@@ -5,3 +5,7 @@ variable "project_name" {
 variable "location" {
     default = "uksouth"
 }
+
+variable "group_name" {
+    default = "example-project-rg"
+}
