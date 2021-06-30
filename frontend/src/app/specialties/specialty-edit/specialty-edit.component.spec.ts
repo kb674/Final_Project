@@ -22,7 +22,7 @@
  * @author Vitaliy Fedoriv
  */
 
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {Specialty} from '../specialty';
 import {SpecialtyEditComponent} from './specialty-edit.component';
@@ -46,7 +46,7 @@ describe('SpecialtyEditComponent', () => {
   let spy: Spy;
   let testSpecialty: Specialty;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SpecialtyEditComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
