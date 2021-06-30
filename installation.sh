@@ -28,7 +28,3 @@ sudo curl -L "https://github.com/docker/compose/releases/download/${version}/doc
 
 # make the file executable
 sudo chmod +x /usr/local/bin/docker-compose
-
-# install mysql
-sudo apt install mysql-client-core-5.7 mysql-server -y
-sudo apt install mysql-server -y
