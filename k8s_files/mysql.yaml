@@ -1,39 +1,43 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-rest
+  name: mysql
 spec:
+  ports:
+  - port: 3306
   selector:
-    app: spring-petclinic-rest
-  ports: 
-  - protocol: TCP
-    port: 9966
-    targetPort: 9966
-  type: ClusterIP
+    app: mysql
+  clusterIP: None
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic-rest
-  labels: 
-    app: spring-petclinic-rest
+  name: mysql
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic-rest
+      app: mysql
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+    type: Recreate
   template:
     metadata:
       labels:
-        app: spring-petclinic-rest
+        app: mysql
     spec:
       containers:
-      - name: spring-petclinic-rest
-        image: springcommunity/spring-petclinic-rest
+      - image: mysql:5.6
+        name: mysql
+        env:
+          # Use secret in real usage
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
         ports:
-        - containerPort: 9966 
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
