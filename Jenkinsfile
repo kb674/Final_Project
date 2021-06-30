@@ -11,10 +11,5 @@ pipeline {
                 sh "bash jenkins/scripts/test.sh"  
             }
         }
-        stage('Deploy') {
-            steps {
-                sh "bash jenkins/scripts/deploy.sh"
-            }
-        }
     }
 }
