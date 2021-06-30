@@ -26,18 +26,10 @@ sudo apt install npm -y
 echo n | sudo npm install -g @angular/cli@latest
 ng update @angular/cli @angular/core --allow-dirty --force
 
-# clone project and change directory
-# git clone https://github.com/spring-petclinic/spring-petclinic-angular.git
-# cd spring-petclinic-angular
-
-
 # install local project package
 echo n | sudo npm install --save-dev @angular/cli@latest
 if npm version > 5.0 delete package-lock.json file
 sudo npm install
-
-# run dev server
-# ng serve
 
 # build the project
 ng build

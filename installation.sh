@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# make sure jq & curl is installed
+# make sure jq & curl are installed
 sudo apt update
 sudo apt install curl jq -y
 
@@ -20,6 +20,7 @@ sudo su $USER
 # restart docker daemon
 sudo service docker restart
 
+# install docker compose
 # set compose version to latest
 version=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r '.tag_name')
 
