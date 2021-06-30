@@ -1,9 +1,9 @@
-FROM maven:latest as maven
-COPY ./pom.xml ./pom.xml
-COPY ./src ./src
-RUN mvn dependency:go-offline -B
-RUN mvn clean package
-FROM openjdk:8-alpine
+FROM maven:latest AS build-stage
+COPY . /build
 WORKDIR /build
-COPY --from=maven /build/target/petclinic-backend-0.0.1.jar app.jar
+RUN mvn clean package -DskipTests
+
+FROM java:8 AS runtime
+WORKDIR /opt/backend
+COPY --from=build-stage /build/target/spring-petclinic-rest-2.4.2.jar app.jar
 ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]

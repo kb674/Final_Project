@@ -10,11 +10,22 @@ services:
           protocol: tcp
     backend:
         container_name: backend
-        image: springcommunity/spring-petclinic-rest
+        image: jaydenlsf/spring-petclinic-rest
+        build: ./backend
         ports:
         - target: 9966
           published: 9966
           protocol: tcp
+    db:
+        container_name: db
+        image: mysql:5.7
+        environment:
+          MYSQL_ROOT_PASSWORD: petclinic
+          MYSQL_DATABASE: petclinic
+        ports:
+          - target: 3306
+            published: 3306
+            protocol: tcp
     nginx:
         container_name: nginx
         image: nginx:alpine
