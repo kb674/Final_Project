@@ -3,6 +3,7 @@
 echo "test script has been run"
 
 sudo apt update
+sudo apt upgrade -y
 
 # install chromium browser (by default will download 91.0.4472.101)
 sudo apt install chromium-browser -y
