@@ -34,6 +34,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: springcommunity/spring-petclinic-rest
+        image: jaydenlsf/spring-petclinic-rest
         ports:
         - containerPort: 9966 
