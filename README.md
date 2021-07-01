@@ -90,7 +90,7 @@ We have considered the potential costs of this infrastrcuture, noting down the d
 * David Pexton
 * Jayden Lee
 * Kushal Bhikhabhai
-* Philip Lartley
+* Philip Lartey
 
 # Acknowledgements
 * Harry Volker
