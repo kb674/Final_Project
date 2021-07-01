@@ -29,7 +29,7 @@ npm install -g @angular/cli@8.0.1
 
 #install karma dependencies in the project directory. Change name accordingly
 cd  frontend/
-rm -rf node_modules || true
+
 npm install karma --save-dev
 npm install -g karma-cli
 npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev
