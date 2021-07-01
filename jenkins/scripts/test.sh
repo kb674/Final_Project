@@ -25,7 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v14.17.1
 
 # install angular cli
-npm install -g @angular/cli
+npm install -g @angular/cli@8.0.1
 
 #install karma dependencies in the project directory. Change name accordingly
 cd  frontend/
