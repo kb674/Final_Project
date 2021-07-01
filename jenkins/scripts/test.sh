@@ -3,7 +3,6 @@
 echo "test script has been run"
 
 sudo apt update
-sudo apt upgrade -y
 
 # install chromium browser (by default will download 91.0.4472.101)
 sudo apt install chromium-browser -y
@@ -26,10 +25,11 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v14.17.1
 
 # install angular cli
-npm install -g @angular/cli
+npm install -g @angular/cli@8.0.1
 
 #install karma dependencies in the project directory. Change name accordingly
 cd  frontend/
+rm -rf node_modules || true
 npm install karma --save-dev
 npm install -g karma-cli
 npm install karma-jasmine karma-chrome-launcher jasmine-core --save-dev
