@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PettypeAddComponent} from './pettype-add.component';
 import {PetTypeService} from '../pettype.service';
@@ -23,7 +23,7 @@ describe('PettypeAddComponent', () => {
   let spy: Spy;
   let testPettype: PetType;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PettypeAddComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],

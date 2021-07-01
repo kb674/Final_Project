@@ -22,7 +22,7 @@
  * @author Vitaliy Fedoriv
  */
 
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import {OwnerAddComponent} from './owner-add.component';
@@ -45,7 +45,7 @@ describe('OwnerAddComponent', () => {
   let component: OwnerAddComponent;
   let fixture: ComponentFixture<OwnerAddComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [OwnerAddComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],

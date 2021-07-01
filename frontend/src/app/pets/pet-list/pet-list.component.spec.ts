@@ -23,7 +23,7 @@
  * @author Vitaliy Fedoriv
  */
 
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import {PetListComponent} from './pet-list.component';
@@ -48,7 +48,7 @@ describe('PetListComponent', () => {
   let petService: PetService;
   let spy: Spy;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PetListComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
