@@ -79,7 +79,6 @@ As a team we have also thought of the infrastrcuture needed for a potential prod
 We have considered the potential costs of this infrastrcuture, noting down the difference in costs when using a pay-as-you subscription in contrast to reserving components. Our general approach to the costing in this scenario would be to run the infrasture for a certain trial period to get information on the usage. Based on this, we would then leverage the scalabililty of cloud resources to scale our infrastructure based on demand. For example we would then be able to scale based on seasonal demand (example, Christmas period) and daily demand (example, a certain period of the day is consitently more busy).
 
 # Future Improvements
-* Add a MySQL database
 * End to end testing
 * Create a test environment (a website that can be only accessed on specific machines)
 * Using code to provision a jenkins vm
@@ -95,3 +94,4 @@ We have considered the potential costs of this infrastrcuture, noting down the d
 
 # Acknowledgements
 * Harry Volker
+* Ollie Nichols
