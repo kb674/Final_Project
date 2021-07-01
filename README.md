@@ -71,7 +71,7 @@ A risk assessment was carried out at the beggining of the project to outline pot
 ![](https://github.com/kb674/Final-readme/blob/main/Images/sql-COSTS.png)
 
 As a team we have also thought of the infrastrcuture needed for a potential production environment which would consist of:
-* A vm whch will act as the CI server.
+* A vm which will act as the CI server.
 * A AKS cluster with 5 nodes.
 * Another vm which can be added as a node to the cluster.
 * MySQL database.
