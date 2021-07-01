@@ -72,11 +72,11 @@ A risk assessment was carried out at the beggining of the project to outline pot
 
 As a team we have also thought of the infrastrcuture needed for a potential production environment which would consist of:
 * A vm which will act as the CI server.
-* A AKS cluster with 5 nodes.
+* An AKS cluster with 5 nodes.
 * Another vm which can be added as a node to the cluster.
 * MySQL database.
 
-We have considered the potential costs of this infrastrcuture, noting down the difference in costs when using a pay-as-you subscription in contrast to reserving components. Our general approach to the costing in this scenario would be to run the infrasture for a certain trial period to get information on the usage. Based on this, we would then leverage the scalabililty of cloud resources to scale our infrastructure based on demand. For example we would then be able to scale based on seasonal demand (example, Christmas period) and daily demand (example, a certain period of the day is consitently more busy).
+We have considered the potential costs of this infrastrcuture, noting down the difference in costs when using a pay-as-you subscription in contrast to reserving components. Our general approach to the costing in this scenario would be to run the infrastructure for a certain trial period to get information on the usage. Based on this, we would then leverage the scalabililty of cloud resources to scale our infrastructure based on demand. For example we would then be able to scale based on seasonal demand (example, Christmas period) and daily demand (example, a certain period of the day is consitently more busy).
 
 # Future Improvements
 * End to end testing
