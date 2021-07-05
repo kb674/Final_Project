@@ -17,10 +17,10 @@ The user stories for the sprint are shown above. We have written two sets of sto
 
 
 # CI Pipeline
-![](https://github.com/kb674/Final-readme/blob/main/Images/Pipeline%20-%203.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/Pipeline%20-%203.png)
 
 ## Kanban Board
-![](https://github.com/kb674/Final-readme/blob/main/Images/Kanban%20-%201.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/Kanban%20-%201.png)
 Asana was chosen as our Kanban board. This tool was used to create all our tasks for the sprint, assign Moscow prioritisation and assign tasks to each member. Not only did this tool make these tasks easy to do, it also allowed us to share important files such as diagrams and documentation which aided workflow.
 
 The board has four backlogs
@@ -48,7 +48,7 @@ ng test --karma-config karma.conf.js --browsers=ChromeHeadless --watch=false
 By using Chrome Headless this allows for the tests to be run without opening a browser.
 The ``--watch=false`` flag allows for the test results to be outputted to the console.
 
-![](https://github.com/kb674/Final-readme/blob/main/Images/Test%20-%201.5.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/Test%20-%201.5.png)
 
 ## Docker
 Docker was used to create containers for both the frontend and the backend. These images were then pushed to a docker hub repository. By creating containers this way, we could then pull them from the repository during the deployment stage. A docker-compose.yaml has been used to keep the building and pushing of images consistent.
@@ -63,12 +63,12 @@ As the application needed a more complex configuration for the frontend and back
 Jenkins was used to automate the above processes. A webhook was used to trigger the job whenever there was a push to the repository. A jenkinsfile specified what scripts to run. There was a total of three scripts, the first script installed all the dependencies needed, then the test script was run and finally a deploy script was used to deploy the app; first provisioning the infrastructure and secondly deploying the app to the cluster. 
 
 ## Risk Assessment
-![](https://github.com/kb674/Final-readme/blob/main/Images/Risk%20-%201.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/Risk%20-%201.png)
 A risk assessment was carried out at the beggining of the project to outline potential risks and potential control measures to implement during the project to reduce these risks.
 
 # Pricing 
-![](https://github.com/kb674/Final-readme/blob/main/Images/Costings%20-%201.png)
-![](https://github.com/kb674/Final-readme/blob/main/Images/sql-COSTS.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/Costings%20-%201.png)
+![](https://github.com/kb674/Final_Project/blob/main/Images/sql-COSTS.png)
 
 As a team we have also thought of the infrastrcuture needed for a potential production environment which would consist of:
 * A vm which will act as the CI server.
